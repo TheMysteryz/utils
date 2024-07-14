@@ -9,6 +9,7 @@
  * 	strCapitalize,
  * 	strLowercase,
  * 	strUppercase,
+ * 	copyToClipboard,
  * } from 'pifplif/utils';
  *
  * formatDateZero(1); // '01'
@@ -16,13 +17,22 @@
  * strCapitalize('hello'); // 'Hello'
  * strLowercase('HELLO'); // 'hello'
  * strUppercase('hello'); // 'HELLO'
+ * copyToClipboard('Hello', () => console.log('Copied!'), console.error);
  * ```
- * 
+ *
  * @module utils
  */
 
+import { copyToClipboard } from './src/copyToClipboard';
 import { formatDateZero } from './src/formatDateZero';
 import { formatter } from './src/formatter';
 import { strCapitalize, strLowercase, strUppercase } from './src/string';
 
-export { formatDateZero, formatter, strCapitalize, strLowercase, strUppercase };
+export {
+	formatDateZero,
+	formatter,
+	strCapitalize,
+	strLowercase,
+	strUppercase,
+	copyToClipboard,
+};
