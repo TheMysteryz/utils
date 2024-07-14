@@ -3,9 +3,19 @@
  *
  * @example
  * ```ts
- * import { formatDateZero } from 'pifplif/utils';
+ * import {
+ * 	formatDateZero,
+ * 	formatter,
+ * 	strCapitalize,
+ * 	strLowercase,
+ * 	strUppercase,
+ * } from 'pifplif/utils';
  *
  * formatDateZero(1); // '01'
+ * formatter.format(1000); // '1,000.00'
+ * strCapitalize('hello'); // 'Hello'
+ * strLowercase('HELLO'); // 'hello'
+ * strUppercase('hello'); // 'HELLO'
  * ```
  * 
  * @module utils
