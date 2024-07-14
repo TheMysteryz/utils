@@ -17,7 +17,11 @@
  * strCapitalize('hello'); // 'Hello'
  * strLowercase('HELLO'); // 'hello'
  * strUppercase('hello'); // 'HELLO'
- * copyToClipboard('Hello', () => console.log('Copied!'), console.error);
+ * copyToClipboard('Hello, world!'); // or
+ * copyToClipboard('Hello, world!', {
+ * 	onSuccess: (data) => console.log('Copied:', data),
+ * 	onError: (error) => console.error('Error:', error),
+ * });
  * ```
  *
  * @module utils

@@ -1,18 +1,19 @@
 /**
  * Copy text to the clipboard.
- * @param text The text to copy to the clipboard.
- * @param onSuccess Callback function to execute when the text is successfully copied to the clipboard.
- * @param onError Callback function to execute when an error occurs while copying the text to the clipboard.
- * @returns Promise<void>
+ * @param text - The text to copy to the clipboard.
+ * @param option - An object containing the `onSuccess` and `onError` callback functions.
+ * @returns A promise that resolves when the text has been copied to the clipboard.
  */
 export const copyToClipboard = async (
 	text: string,
-	onSuccess: () => void,
-	onError: (error: unknown) => void
+	option?: {
+		onSuccess: (data: string) => void;
+		onError: (error: unknown) => void;
+	}
 ): Promise<void> => {
 	try {
 		await navigator.clipboard.writeText(text);
-		onSuccess();
+		option?.onSuccess(text);
 	} catch (error) {
 		const textArea = document.createElement('textarea');
 		textArea.value = text;
@@ -28,10 +29,10 @@ export const copyToClipboard = async (
 		try {
 			// Execute the copy command
 			document.execCommand('copy'); // deprecated but still works in most browsers
-			onSuccess();
+			option?.onSuccess(text);
 		} catch (error) {
 			console.error('Error copying text to clipboard:', error);
-			onError(error);
+			option?.onError(error);
 		}
 
 		document.body.removeChild(textArea);
