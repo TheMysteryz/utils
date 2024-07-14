@@ -11,6 +11,7 @@
  * 	strUppercase,
  * 	copyToClipboard,
  * 	sleep,
+ * 	cs, // color
  * } from '@pifplif/utils';
  *
  * formatDateZero(1); // '01'
@@ -24,6 +25,7 @@
  * 	onError: (error) => console.error('Error:', error),
  * });
  * sleep(1000); // sleep for 1 second
+ * console.log(cs('Hello, world!', { foregroundColor: "red" })); // color the text in red
  * ```
  *
  * @module utils
@@ -34,3 +36,4 @@ export { formatDateZero } from './src/formatDateZero.ts';
 export { formatter } from './src/formatter.ts';
 export { strCapitalize, strLowercase, strUppercase } from './src/string.ts';
 export { sleep } from './src/sleep.ts';
+export { cs, COLORS, type Color } from './src/color.ts';
