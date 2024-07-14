@@ -14,7 +14,7 @@ type Option = {
 	backgroundColor?: Color;
 };
 
-const color = (message: string, options?: Option) => {
+const color = (message: string, options?: Option): string => {
 	if (!options) return message;
 
 	let colors = [];
@@ -35,7 +35,7 @@ const color = (message: string, options?: Option) => {
  * @param options **foreground** color | **background** color
  * @returns Return a formated string with color
  */
-const cs = (message: string | number, options?: Option) =>
+const cs = (message: string | number, options?: Option): string =>
 	color(message.toString(), options);
 
 export type { Color };
