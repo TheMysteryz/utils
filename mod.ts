@@ -7,6 +7,8 @@
  *
  * formatDateZero(1); // '01'
  * ```
+ * 
+ * @module utils
  */
 
 import { formatDateZero } from './src/formatDateZero';
