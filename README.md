@@ -1,4 +1,4 @@
-# utils
+# utils with JSR
 
 This is my helper functions and utilities library. It is a collection of functions that I use in my projects. It is a work in progress and I will be adding more functions as I need them.
 
