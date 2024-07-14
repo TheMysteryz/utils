@@ -1,12 +1,14 @@
 /**
  * A simple loading spinner.
- * @returns An object containing the `start` and `stop` functions.
+ *
  * @example
  * ```ts
  * const { start, stop } = loading();
  * start('Loading...');
  * setTimeout(() => stop('Done!'), 5000);
  * ```
+ *
+ * @returns An object containing the `start` and `stop` functions.
  */
 export const loading = (): {
 	start: (msg: string) => void;

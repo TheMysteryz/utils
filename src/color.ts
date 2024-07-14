@@ -34,10 +34,17 @@ const color = (message: string, options?: Option): string => {
 
 /**
  * Colorize a string
- * 
- * List of available colors:
+ *
+ * - List of available colors:
  * ```ts
  * "red" | "green" | "yellow" | "blue" | "magenta" | "cyan" | "white"
+ * ```
+ *
+ * @example
+ * ```ts
+ * import { cs } from './color';
+ *
+ * console.log(cs('Hello, World!', { foregroundColor: 'red' }));
  * ```
  * @param message The message
  * @param options **foreground** color | **background** color
