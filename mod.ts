@@ -10,6 +10,7 @@
  * 	strLowercase,
  * 	strUppercase,
  * 	copyToClipboard,
+ * 	sleep,
  * } from '@pifplif/utils';
  *
  * formatDateZero(1); // '01'
@@ -22,21 +23,14 @@
  * 	onSuccess: (data) => console.log('Copied:', data),
  * 	onError: (error) => console.error('Error:', error),
  * });
+ * sleep(1000); // sleep for 1 second
  * ```
  *
  * @module utils
  */
 
-import { copyToClipboard } from './src/copyToClipboard';
-import { formatDateZero } from './src/formatDateZero';
-import { formatter } from './src/formatter';
-import { strCapitalize, strLowercase, strUppercase } from './src/string';
-
-export {
-	formatDateZero,
-	formatter,
-	strCapitalize,
-	strLowercase,
-	strUppercase,
-	copyToClipboard,
-};
+export { copyToClipboard } from './src/copyToClipboard.ts';
+export { formatDateZero } from './src/formatDateZero.ts';
+export { formatter } from './src/formatter.ts';
+export { strCapitalize, strLowercase, strUppercase } from './src/string.ts';
+export { sleep } from './src/sleep.ts';
