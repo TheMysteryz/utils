@@ -10,7 +10,7 @@
  * 	strLowercase,
  * 	strUppercase,
  * 	copyToClipboard,
- * } from 'pifplif/utils';
+ * } from '@pifplif/utils';
  *
  * formatDateZero(1); // '01'
  * formatter.format(1000); // '1,000.00'

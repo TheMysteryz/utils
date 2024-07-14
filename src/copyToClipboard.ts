@@ -1,5 +1,6 @@
 /**
  * Copy text to the clipboard.
+ * # /!\ Works only in browser /!\
  * @param text - The text to copy to the clipboard.
  * @param option - An object containing the `onSuccess` and `onError` callback functions.
  * @returns A promise that resolves when the text has been copied to the clipboard.
