@@ -1,3 +1,6 @@
+/**
+ * Colors index
+ */
 const COLORS = {
 	red: 1,
 	green: 2,
@@ -8,6 +11,9 @@ const COLORS = {
 	white: 7,
 } as const;
 
+/**
+ * List of colors
+ */
 type Color = keyof typeof COLORS;
 type Option = {
 	foregroundColor?: Color;
@@ -27,7 +33,9 @@ const color = (message: string, options?: Option): string => {
 };
 
 /**
- * ## List of colors
+ * Colorize a string
+ * 
+ * List of available colors:
  * ```ts
  * "red" | "green" | "yellow" | "blue" | "magenta" | "cyan" | "white"
  * ```
